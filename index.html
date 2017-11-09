@@ -10,6 +10,40 @@
 <!-- InstanceEndEditable -->
 </head>
 
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 5px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%; /* ESTE TIENE QUE SER 100% / NUMERO DE COLUMNAS*/
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+
 <body>
 
   <header>
@@ -103,35 +137,6 @@
 
 </div>
 
-<!--<script>
-var pswpElement = document.querySelectorAll('.pswp')[0];
-
-// build items array
-var items = [
-    {
-        src: 'https://placekitten.com/600/400',
-        w: 600,
-        h: 400
-    },
-    {
-        src: 'https://placekitten.com/1200/900',
-        w: 1200,
-        h: 900
-    }
-];
-
-// define options (if needed)
-var options = {
-    // optionName: 'option value'
-    // for example:
-    index: 0 // start at first slide
-};
-
-// Initializes and opens PhotoSwipe
-var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-gallery.init();
-
-</script> -->
 
 <script>
 var openPhotoSwipe = function() {
@@ -140,12 +145,32 @@ var openPhotoSwipe = function() {
     // build items array
     var items = [
         {
-            src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+            src: "resources/baia.jpg",
             w: 964,
             h: 1024
         },
         {
-            src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+            src:"resources/ahtfake.png",
+            w: 1024,
+            h: 683
+        },
+        {
+            src:"resources/Perfil.jpg",
+            w: 1024,
+            h: 683
+        },
+        {
+            src:"resources/franco jaja.png",
+            w: 1024,
+            h: 683
+        },
+        {
+            src:"resources/rekt.png",
+            w: 1024,
+            h: 683
+        },
+        {
+            src:"resources/TFW.png",
             w: 1024,
             h: 683
         }
@@ -166,10 +191,31 @@ var openPhotoSwipe = function() {
     gallery.init();
 };
 
-openPhotoSwipe();
+/* openPhotoSwipe(); */
 
 document.getElementById('btn').onclick = openPhotoSwipe;
 </script>
+
+<div class="row">
+  <div class="column">
+    <img src="resources/ahtfake.png" style="width:100%" onclick=openPhotoSwipe()>
+    <img src="resources/baia.jpg" style="width:100%" onclick=openPhotoSwipe()>
+  </div>
+  <div class="column">
+    <img src="resources/Perfil.jpg" style="width:100%" onclick=openPhotoSwipe()>
+    <img src="resources/franco jaja.png" style="width:100%" onclick=openPhotoSwipe()>
+  </div>
+  <div class="column">
+    <img src="resources/rekt.png" style="width:100%" onclick=openPhotoSwipe()>
+    <img src="resources/TFW.png" style="width:100%" onclick=openPhotoSwipe()>
+  </div>
+  <div class="column">
+    <img src="resources/irl.png" style="width:100%" onclick=openPhotoSwipe()>
+    <img src="resources/biblethump.png" style="width:100%" onclick=openPhotoSwipe()>
+  </div>
+</div>
+
+
   <div class="main">INICIO</div>
   <!-- InstanceEndEditable -->
   <footer>
