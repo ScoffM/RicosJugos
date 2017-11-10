@@ -11,217 +11,807 @@
 </head>
 
 <style>
-* {
-    box-sizing: border-box;
-}
+    *{
+        box-sizing: border-box;
+    }
 
-body {
-    margin: 0;
-    font-family: Arial;
-}
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
 
-.header {
-    text-align: center;
-    padding: 5px;
-}
+    .header {
+        text-align: center;
+        padding: 5px;
+    }
 
-/* Create two equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 25%; /* ESTE TIENE QUE SER 100% / NUMERO DE COLUMNAS*/
-    padding: 10px;
-}
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 12%; /* ESTE TIENE QUE SER 100% / NUMERO DE COLUMNAS*/
+        padding: 0px;
+    }
 
-.column img {
-    margin-top: 12px;
-}
+    .column img {
+        margin-top: px;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 </style>
 
 <body>
 
-  <header>
-  	<div class="bloqueLimitado">
-		<a href="index.html"><img class="logo" src="img/logo.svg"></a>	
-	</div>
-	<nav id="menu" class="ani300" >
-		<a href="index.html">INICIO</a>
-		<a href="nosotros.html">NOSOTROS</a> 
-		<a href="menu.html">MENÚ</a> 
-		<a href="catalogo.html">CATÁLOGO</a> 
-		<a href="eventos.html">EVENTOS</a> 
-		<a href="http://www.facebook.com" target="_blank">TIENDA EN LÍNEA</a> 
-		<a href="contacto.html">CONTACTO</a>
-	</nav>		
-  </header>
-  <!-- InstanceBeginEditable name="contenido" -->
-	
+    <header>
+      	<div class="bloqueLimitado">
+    		<a href="index.html"><img class="logo" src="img/logo.svg"></a>	
+    	</div>
+    	<nav id="menu" class="ani300" >
+    		<a href="index.html">INICIO</a>
+    		<a href="nosotros.html">NOSOTROS</a> 
+    		<a href="menu.html">MENÚ</a> 
+    		<a href="catalogo.html">CATÁLOGO</a> 
+    		<a href="eventos.html">EVENTOS</a> 
+    		<a href="http://www.facebook.com" target="_blank">TIENDA EN LÍNEA</a> 
+    		<a href="contacto.html">CONTACTO</a>
+    	</nav>		
+    </header>
+
+    <div class="main">INICIO</div>
+    <!-- InstanceEndEditable -->
     <!-- Core CSS file -->
-	<link rel="stylesheet" href="js/photoswipe.css"> 
+    <link rel="stylesheet" href="js/photoswipe.css"> 
     <link rel="stylesheet" href="js/default-skin/default-skin.css"> 
- 	<!-- Core JS file -->
-	<script src="js/photoswipe.min.js"></script> 
-	<!-- UI JS file -->
-	<script src="js/photoswipe-ui-default.min.js"></script> 
-    
+    <!-- Core JS file -->
+    <script src="js/photoswipe.min.js"></script> 
+    <!-- UI JS file -->
+    <script src="js/photoswipe-ui-default.min.js"></script> 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Background of PhotoSwipe. 
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+            <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
 
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
+                <div class="pswp__top-bar">
 
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
+                    <!--  Controls are self-explanatory. Order can be changed. -->
 
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
+                    <div class="pswp__counter"></div>
 
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-            <div class="pswp__top-bar">
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
 
-                <!--  Controls are self-explanatory. Order can be changed. -->
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 
-                <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
             </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
         </div>
+    </div>
+    <script>
+        var openPhotoSwipe = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
 
+            // build items array
+            var items = [
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <script>
+        var openPhotoSwipe2 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+                
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <script>
+        var openPhotoSwipe3 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+               
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <script>
+        var openPhotoSwipe4 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+               {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+
+    <script>
+        var openPhotoSwipe5 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <script>
+        var openPhotoSwipe6 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+
+                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <script>
+        var openPhotoSwipe7 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <script>
+        var openPhotoSwipe8 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+
+                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+
+    <script>
+        var openPhotoSwipe9 = function() {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // build items array
+            var items = [
+
+
+                {
+                    src:"Index/Index9.png",
+                    w: 1080,
+                    h: 1070
+                },
+                {
+                    src: "Index/Index1.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index2.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index3.png",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"Index/Index5.jpg",
+                    w: 960,
+                    h: 635
+                },
+                                {
+                    src:"Index/Index6.png",
+                    w: 960,
+                    h: 635
+                },
+
+                {
+                    src:"Index/Index7.jpg",
+                    w: 960,
+                    h: 1270
+                },
+                                {
+                    src:"Index/Index8.jpg",
+                    w: 960,
+                    h: 635
+                }
+            ];
+            // define options (if needed)
+            var options = {
+                     // history & focus options are disabled on CodePen        
+                history: false,
+                focus: false,
+
+                showAnimationDuration: 0,
+                hideAnimationDuration: 0
+                
+            };
+            
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        //**openPhotoSwipe();**//
+        document.getElementById('btn').onclick = openPhotoSwipe;
+    </script>
+
+    <div class="row">
+      <div class="column">
+        <img src="Index/Ghost.png" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="Index/Index1.jpg" style="width:200%" onclick=openPhotoSwipe()>
+        <img src="Index/Index2.jpg" style="width:100%" onclick=openPhotoSwipe2()>
+      </div>
+      <div class="column">
+        <img src="Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
+        <img src="Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
+        <img src="Index/Index3.png" style="width:100%" onclick=openPhotoSwipe3()>
+      </div>
+      <div class="column">
+        <img src="Index/Index4.jpg" style="width:100%" onclick=openPhotoSwipe4()>
+        <img src="Index/Index5.jpg" style="width:100%" onclick=openPhotoSwipe5()>
+        <img src="Index/Index6.png" style="width:100%" onclick=openPhotoSwipe6()>
+      </div>
+      <div class="column">
+        <img src="Index/Index7.jpg" style="width:100%" onclick=openPhotoSwipe7()>
+        <img src="Index/Index8.jpg" style="width:100%" onclick=openPhotoSwipe8()>
+      </div>
+      <div class="column">
+        <img src="Index/Index9.png" style="width:200%" onclick=openPhotoSwipe9()>
+      </div>
+      <div class="column">
+        <img src="Index/Ghost.png" style="width:100%">
+      </div>
     </div>
 
-</div>
 
 
-<script>
-var openPhotoSwipe = function() {
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-
-    // build items array
-    var items = [
-        {
-            src: "resources/baia.jpg",
-            w: 964,
-            h: 1024
-        },
-        {
-            src:"resources/ahtfake.png",
-            w: 1024,
-            h: 683
-        },
-        {
-            src:"resources/Perfil.jpg",
-            w: 1024,
-            h: 683
-        },
-        {
-            src:"resources/franco jaja.png",
-            w: 1024,
-            h: 683
-        },
-        {
-            src:"resources/rekt.png",
-            w: 1024,
-            h: 683
-        },
-        {
-            src:"resources/TFW.png",
-            w: 1024,
-            h: 683
-        }
-    ];
-    
-    // define options (if needed)
-    var options = {
-             // history & focus options are disabled on CodePen        
-        history: false,
-        focus: false,
-
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0
-        
-    };
-    
-    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-};
-
-/* openPhotoSwipe(); */
-
-document.getElementById('btn').onclick = openPhotoSwipe;
-</script>
-
-<div class="row">
-  <div class="column">
-    <img src="resources/ahtfake.png" style="width:100%" onclick=openPhotoSwipe()>
-    <img src="resources/baia.jpg" style="width:100%" onclick=openPhotoSwipe()>
-  </div>
-  <div class="column">
-    <img src="resources/Perfil.jpg" style="width:100%" onclick=openPhotoSwipe()>
-    <img src="resources/franco jaja.png" style="width:100%" onclick=openPhotoSwipe()>
-  </div>
-  <div class="column">
-    <img src="resources/rekt.png" style="width:100%" onclick=openPhotoSwipe()>
-    <img src="resources/TFW.png" style="width:100%" onclick=openPhotoSwipe()>
-  </div>
-  <div class="column">
-    <img src="resources/irl.png" style="width:100%" onclick=openPhotoSwipe()>
-    <img src="resources/biblethump.png" style="width:100%" onclick=openPhotoSwipe()>
-  </div>
-</div>
-
-
-  <div class="main">INICIO</div>
-  <!-- InstanceEndEditable -->
   <footer>
  </footer> 
- 
-
-
 </body>
 <!-- InstanceEnd --></html>
