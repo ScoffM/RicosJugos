@@ -1,2 +1,4 @@
 # RicosJugos
-Development for the Ricos Jugos store page
+Development for the Ricos Jugos Store website
+
+Project for Hipermedial
