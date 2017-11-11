@@ -28,12 +28,12 @@
     /* Create two equal columns that floats next to each other */
     .column {
         float: left;
-        width: 12%; /* ESTE TIENE QUE SER 100% / NUMERO DE COLUMNAS*/
+        width: 25%; /* ESTE TIENE QUE SER 100% / NUMERO DE COLUMNAS*/
         padding: 0px;
     }
 
     .column img {
-        margin-top: px;
+        margin-top: 1px;
     }
 
     /* Clear floats after the columns */
@@ -44,26 +44,28 @@
     }
 </style>
 
+
 <body>
 
-    <header>
-      	<div class="bloqueLimitado">
-    		<a href="index.html"><img class="logo" src="img/logo.svg"></a>	
-    	</div>
-    	<nav id="menu" class="ani300" >
-    		<a href="index.html">INICIO</a>
-    		<a href="nosotros.html">NOSOTROS</a> 
-    		<a href="menu.html">MENÚ</a> 
-    		<a href="catalogo.html">CATÁLOGO</a> 
-    		<a href="eventos.html">EVENTOS</a> 
-    		<a href="http://www.facebook.com" target="_blank">TIENDA EN LÍNEA</a> 
-    		<a href="contacto.html">CONTACTO</a>
-    	</nav>		
-    </header>
+  <header>
+  	<div class="bloqueLimitado">
+		<a href="index.html"><img class="logo" src="img/logo.svg"></a>	
+	</div>
+	<nav id="menu" class="ani300" >
+		<a href="index.html">INICIO</a>
+		<a href="nosotros.html">NOSOTROS</a> 
+		<a href="menu.html">MENÚ</a> 
+		<a href="catalogo.html">CATÁLOGO</a> 
+		<a href="eventos.html">EVENTOS</a> 
+		<a href="http://www.facebook.com" target="_blank">TIENDA EN LÍNEA</a> 
+		<a href="contacto.html">CONTACTO</a>
+	</nav>		
+  </header>
+  <!-- InstanceBeginEditable name="contenido" -->
+ 
+  
+  <div class="bloqueLimitado">
 
-    <div class="main">INICIO</div>
-    <!-- InstanceEndEditable -->
-    <!-- Core CSS file -->
     <link rel="stylesheet" href="js/photoswipe.css"> 
     <link rel="stylesheet" href="js/default-skin/default-skin.css"> 
     <!-- Core JS file -->
@@ -136,49 +138,49 @@
             // build items array
             var items = [
                 {
-                    src: "Index/Index1.jpg",
+                    src: "img/Index/Index3.jpg",
                     w: 960,
                     h: 635
                 },
                 {
-                    src:"Index/Index2.jpg",
+                    src:"img/Index/Index2.jpg",
                     w: 960,
                     h: 635
                 },
                 {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
+                    src:"img/Index/Index1.png",
                     w: 1080,
-                    h: 1070
+                    h: 849
+                },
+                {
+                    src:"img/Index/Index4.jpg",
+                    w: 960,
+                    h: 635
+                },
+                {
+                    src:"img/Index/Index5.png",
+                    w: 1080,
+                    h: 1073
+                },
+                {
+                    src:"img/Index/vaso y prints.jpg",
+					w: 3664,
+                    h: 4928
+                },
+                {
+                    src:"img/Index/Index10.jpg",
+                    w: 3664,
+                    h: 4928
+                },
+                {
+                    src:"img/Index/Index9.jpg",
+                    w: 3664,
+                    h: 4928
+                },
+                {
+                    src:"img/Index/Index7.png",
+                    w: 1080,
+                    h: 1074
                 }
             ];
             // define options (if needed)
@@ -199,619 +201,44 @@
         //**openPhotoSwipe();**//
         document.getElementById('btn').onclick = openPhotoSwipe;
     </script>
-
-    <script>
-        var openPhotoSwipe2 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-                
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-    <script>
-        var openPhotoSwipe3 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-               
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-    <script>
-        var openPhotoSwipe4 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-               {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-
-    <script>
-        var openPhotoSwipe5 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-    <script>
-        var openPhotoSwipe6 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-
-                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-    <script>
-        var openPhotoSwipe7 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-    <script>
-        var openPhotoSwipe8 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-
-                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-
-    <script>
-        var openPhotoSwipe9 = function() {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-
-            // build items array
-            var items = [
-
-
-                {
-                    src:"Index/Index9.png",
-                    w: 1080,
-                    h: 1070
-                },
-                {
-                    src: "Index/Index1.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index2.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index3.png",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index4.jpg",
-                    w: 960,
-                    h: 635
-                },
-                {
-                    src:"Index/Index5.jpg",
-                    w: 960,
-                    h: 635
-                },
-                                {
-                    src:"Index/Index6.png",
-                    w: 960,
-                    h: 635
-                },
-
-                {
-                    src:"Index/Index7.jpg",
-                    w: 960,
-                    h: 1270
-                },
-                                {
-                    src:"Index/Index8.jpg",
-                    w: 960,
-                    h: 635
-                }
-            ];
-            // define options (if needed)
-            var options = {
-                     // history & focus options are disabled on CodePen        
-                history: false,
-                focus: false,
-
-                showAnimationDuration: 0,
-                hideAnimationDuration: 0
-                
-            };
-            
-            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-            gallery.init();
-        };
-
-        //**openPhotoSwipe();**//
-        document.getElementById('btn').onclick = openPhotoSwipe;
-    </script>
-
-    <div class="row">
+  
+<!--     <div class="row">
       <div class="column">
-        <img src="Index/Ghost.png" style="width:100%">
+        <img src="img/imagenCol.png" style="width:400%" onclick=openPhotoSwipe()>
       </div>
       <div class="column">
-        <img src="Index/Index1.jpg" style="width:200%" onclick=openPhotoSwipe()>
-        <img src="Index/Index2.jpg" style="width:100%" onclick=openPhotoSwipe2()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
       </div>
       <div class="column">
-        <img src="Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
-        <img src="Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
-        <img src="Index/Index3.png" style="width:100%" onclick=openPhotoSwipe3()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
       </div>
       <div class="column">
-        <img src="Index/Index4.jpg" style="width:100%" onclick=openPhotoSwipe4()>
-        <img src="Index/Index5.jpg" style="width:100%" onclick=openPhotoSwipe5()>
-        <img src="Index/Index6.png" style="width:100%" onclick=openPhotoSwipe6()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
       </div>
       <div class="column">
-        <img src="Index/Index7.jpg" style="width:100%" onclick=openPhotoSwipe7()>
-        <img src="Index/Index8.jpg" style="width:100%" onclick=openPhotoSwipe8()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
+        <img src="img/Index/Ghost.png" style="width:100%" onclick=openPhotoSwipe()>
       </div>
-      <div class="column">
-        <img src="Index/Index9.png" style="width:200%" onclick=openPhotoSwipe9()>
-      </div>
-      <div class="column">
-        <img src="Index/Ghost.png" style="width:100%">
-      </div>
-    </div>
+    </div> -->
 
-
-
+  <img src="img/imagenCol.png" width="100%" onclick=openPhotoSwipe()>
+ 
+   <img class="evento" src="img/Eventos/eventos.svg">
+  <br>
+  <br>
+  <img src="img/Eventos/Eventos1.svg">
+  
+  
+	</div>
+   
+     <!-- InstanceEndEditable -->
   <footer>
  </footer> 
+ 
+
+
 </body>
 <!-- InstanceEnd --></html>
